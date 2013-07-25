@@ -14,6 +14,6 @@ use step:
 
 5. execute the Install.sh will override your .vimrc by openvims .vimrc
 
-if you want to add else vim-scripts, you can do it yourself like this:
+if you want to add other vim-scripts, you can do it yourself like this:
 
     git submodule add https://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
