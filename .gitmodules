@@ -25,3 +25,30 @@
 [submodule "bundle/easygrep"]
 	path = bundle/easygrep
 	url = https://github.com/gmccreight/vim-easygrep.git
+[submodule "bundle/snipMate"]
+	path = bundle/snipMate
+	url = https://github.com/vim-scripts/snipMate.git
+[submodule "bundle/blackboard"]
+	path = bundle/blackboard
+	url = https://github.com/vim-scripts/blackboard.vim.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/vim-scripts/rails.vim.git
+[submodule "bundle/grep"]
+	path = bundle/grep
+	url = https://github.com/vim-scripts/grep.vim.git
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = https://github.com/wincent/Command-T.git
+[submodule "bundle/matrix-screensaver"]
+	path = bundle/matrix-screensaver
+	url = https://github.com/uguu-org/vim-matrix-screensaver.git
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git
+[submodule "bundle/lookupfile"]
+	path = bundle/lookupfile
+	url = https://github.com/vim-scripts/lookupfile.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/lminaudier/bufexplorer.vim.git
