@@ -777,7 +777,7 @@ au BufRead,BufNewFile,BufEnter * cd %:p:h
 " 指在常规模式下按"\"键加"t"键，这里不是同时按，而是先按"\"键后按"t"键，间隔在一
 " 秒内，而<Leader>cs是先按"\"键再按"c"又再按"s"键
 
-
+" F7 更新tags,cscope.out文件，system调用有点慢
 function! RefreshCtagsCscope()
     w
     call system('rm -rf ctags cscope.out >> NULL')
@@ -785,4 +785,3 @@ function! RefreshCtagsCscope()
     call system('cscope -Rkb >> NULL')
 endfunction
 nmap <F7> :call RefreshCtagsCscope()<CR>
-
