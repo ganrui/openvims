@@ -24,17 +24,17 @@ use step:
 
 8. To push yourself vim scripts --"vimfiles" directories to github.com, do like this:
     
-9.1 create git repository on github.com
+8.1 create git repository on github.com
 
     goto url:   https://github.com/ganrui/openvims.git
 
     Fork it to youself github count's repo
 
-9.2 git clone youself openvims' repo to your PC.
+8.2 git clone youself openvims' repo to your PC.
 
-9.3 do some changes what you want to do to the ".vim" files.
+8.3 do some changes what you want to do to the ".vim" files.
 
-9.4 then
+8.4 then
 
         git commit 
 
