@@ -39,5 +39,7 @@ use step:
         git commit 
 
         git push
+        (git push -u origin master -f)
+
 
 
