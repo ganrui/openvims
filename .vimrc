@@ -780,8 +780,18 @@ au BufRead,BufNewFile,BufEnter * cd %:p:h
 " F7 更新tags,cscope.out文件，system调用有点慢
 function! RefreshCtagsCscope()
     w
-    call system('rm -rf ctags cscope.out >> NULL')
+    if filereadable("cscope.out") 
+        cs kill cscope.out
+        call system('rm -rf cscope.out >> NULL')
+    endif
+
+    if filereadable("tags") 
+        call system('rm -rf tags >> NULL')
+    endif
+
     call system('ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f tags >> NULL')
     call system('cscope -Rkb >> NULL')
+    cs add cscope.out
 endfunction
 nmap <F7> :call RefreshCtagsCscope()<CR>
+
