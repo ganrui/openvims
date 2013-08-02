@@ -782,16 +782,17 @@ function! RefreshCtagsCscope()
     w
     if filereadable("cscope.out") 
         cs kill cscope.out
-        call system('rm -rf cscope.out >> NULL')
+        if filereadable("tags")
+            call system("rm -f cscope.out tags>>NULL && ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f tags >> NULL  && cscope -Rkb>>NULL")
+        else
+            call system("rm -f cscope.out>>NULL && ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f tags >> NULL  && cscope -Rkb>>NULL")
+        endif
+    else
+        if filereadable("tags")
+            call system("rm -f tags>>NULL && ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f tags >> NULL  && cscope -Rkb>>NULL")
+        endif
     endif
-
-    if filereadable("tags") 
-        call system('rm -rf tags >> NULL')
-    endif
-
-    call system('ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f tags >> NULL')
-    call system('cscope -Rkb >> NULL')
     cs add cscope.out
 endfunction
-nmap <F7> :call RefreshCtagsCscope()<CR>
+nmap <F7> :silent call RefreshCtagsCscope()<CR>
 
